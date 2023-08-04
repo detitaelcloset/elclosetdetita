@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .clients-list {
+    margin-bottom: 20px;
+  }
+  
+  .clients-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .clients-list li {
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+  
+  .clients-list li:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .client-form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .client-form input {
+    margin-right: 10px;
+  }
+  
+  .client-form button {
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <title>ElClosetDetita</title>
+   <!-- Agrega el script de Firebase -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+
+  
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="home.html">El Closet De Tita</a>
+          <img src="img/logo_closet.png"  width="40" height="40">
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="addProduct.html">Agregar Pedidos</a>
+              </li>
+
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Agregar inforación del cliente
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="addClient.html">Agregar Cliente</a></li>
+                  <li><a class="dropdown-item" href="editClient.htm">Editar Cliente</a></li>
+                  <li><a class="dropdown-item" href="deleteClient.html">Eliminar Cliente</a></li>
+                  <li><a class="dropdown-item" href="addProductClient.html">Agregar producto al cliente</a></li>
+              </li>
+            </ul>
+
+         
+          </div>
+
+
+          <form class="d-flex" role="search">
+            <button class="btn btn-outline-success" onclick="cerrarSesion()" type="submit">Cerrar Sesion</button>
+          </form>
+
+        </div>
+      </nav>
+
+
+      <div class="card">
+        <div class="card-header">
+          
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Agregar producto a un Cliente</h5>
+
+          <div class="mb-3 marginTop">
+            <label for="exampleFormControlTextarea1" class="form-label">Agregar orden</label>
+            <textarea class="form-control" id="product_et" rows="3"></textarea>
+          </div>
+
+          <div class="mb-3 marginTop">
+            <label for="exampleFormControlInput1" class="form-label">Precio Total</label>
+            <input type="number" class="form-control" id="price_et" >
+          </div>
+
+          <div class="mb-3 marginTop">
+            <label for="exampleFormControlInput1" class="form-label" >Nombre del cliente</label>
+            <select class="form-select" aria-label="Default select example" id="client_et">
+            <option selected>Open this select menu</option>   
+              </select>
+          </div>
+
+
+
+
+          <div class="mb-3 marginTop">
+            <label for="exampleFormControlInput1" class="form-label">Fecha:</label>
+            <input type="date" class="form-control" id="date_et" >
+          </div>
+
+          <div class="mb-3 marginTop">
+            <label for="exampleFormControlInput1" class="form-label">Abono</label>
+            <input type="number" class="form-control" id="abono_et" >
+          </div>
+
+          <div class="mb-3 marginTop">
+            <label for="exampleFormControlInput1" class="form-label">Saldo</label>
+            <input type="number" class="form-control" id="saldo_et" >
+          </div>
+
+
+          <a onclick="validateData()" class="btn btn-primary">Agregar</a>
+
+        </div>
+      </div>
+
+
+    <script src="js/firebase-config.js"></script>
+    <script src="js/addProductClient.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>
